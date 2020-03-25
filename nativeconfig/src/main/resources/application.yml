@@ -1,0 +1,21 @@
+server:
+  port: 8762
+spring:
+ application:
+   name: nativeconfigserver
+ profiles:
+   active: native
+ cloud:
+   config:
+    server:
+      native:
+        search-locations: classpath:/shared
+
+
+
+#profiles.active ：配置⽂件的获取⽅式  从本地获取 而不是远程 git那些
+#cloud.config.server.native.search-locations ：本地配置⽂件存放的路径
+
+
+
+
