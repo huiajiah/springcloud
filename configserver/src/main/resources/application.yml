@@ -1,2 +1,24 @@
 server:
   port: 8888
+
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/huiajiah/springcloud.git
+          username: #github用户名
+          password: #github密码
+          searchPaths: config
+      label: master
+
+eureka:
+  client:
+    serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+    instance:
+      prefer-ip-address: true
+
+

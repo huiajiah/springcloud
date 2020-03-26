@@ -15,4 +15,9 @@ public class FeignError implements FeignProviderClient {
     public String index() {
         return "服务器维护中。。。";
     }
+
+    @Override
+    public Student findById(long id) {
+        return  new Student(id,"没有找到改id的值",0);
+    }
 }
